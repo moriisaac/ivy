@@ -760,8 +760,8 @@ def array_values(
                         max_value=float_of(
                             -abs_smallest_val, floats_info[dtype]["width"]
                         ),
+
                         allow_nan=allow_nan,
-                        allow_subnormal=allow_subnormal,
                         allow_infinity=allow_inf,
                         width=floats_info[dtype]["width"],
                         exclude_min=exclude_min,
@@ -771,23 +771,33 @@ def array_values(
                         min_value=float_of(
                             abs_smallest_val, floats_info[dtype]["width"]
                         ),
+                        # Float function does not support the allow_subnormal argument
                         max_value=float_of(max_value, floats_info[dtype]["width"]),
                         allow_nan=allow_nan,
-                        allow_subnormal=allow_subnormal,
                         allow_infinity=allow_inf,
                         width=floats_info[dtype]["width"],
                         exclude_min=exclude_min,
                         exclude_max=exclude_max,
                     ),
                 )
-            if "complex" in dtype:
-                float_strategy = st.tuples(float_strategy, float_strategy)
-            values = draw(
-                list_of_length(
-                    x=float_strategy,
-                    length=size,
-                )
-            )
+                if "float" in dtype or "complex" in dtype:
+                    kind_dtype = "float"
+                    dtype_info = ivy.finfo(dtype)
+                elif "int" in dtype:
+                    kind_dtype = "int"
+                    dtype_info = ivy.iinfo(dtype)
+                elif "bool" in dtype:
+
+
+                    # new code to generate random float array with subnormal values
+                    if allow_subnormal:
+                        arr = np.random.randn(*shape)
+                    else:
+                        arr = np.random.randn(*shape)
+                        arr = arr[np.isneginf(arr) | np.isposinf(arr) | np.isfinite(arr)]
+                    return arr
+                else:
+                    raise ValueError("unsupported data type")
             if "complex" in dtype:
                 values = [complex(*v) for v in values]
     else:
