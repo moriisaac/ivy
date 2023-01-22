@@ -1,0 +1,17 @@
+Array
+=====
+
+.. automodule:: ivy.array.array
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Array
+
+   array/Array.rst
+

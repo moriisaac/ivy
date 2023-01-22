@@ -1,0 +1,65 @@
+Container
+=========
+
+.. automodule:: ivy.container.container
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :maxdepth: -1
+   :caption: Container
+
+   container/container/Container.rst
+
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Container
+
+   container/activations.rst
+   container/base.rst
+   container/conversions.rst
+   container/creation.rst
+   container/data_type.rst
+   container/device.rst
+   container/elementwise.rst
+   container/experimental.rst
+   container/general.rst
+   container/gradients.rst
+   container/image.rst
+   container/layers.rst
+   container/linear_algebra.rst
+   container/losses.rst
+   container/manipulation.rst
+   container/norms.rst
+   container/random.rst
+   container/searching.rst
+   container/set.rst
+   container/sorting.rst
+   container/statistical.rst
+   container/utility.rst
+   container/wrapping.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`container forum`: https://discord.com/channels/799879767196958751/1028297229980668015
+.. _`container forum`: https://discord.com/channels/799879767196958751/1028297229980668015
+.. _`container forum`: https://discord.com/channels/799879767196958751/1028297229980668015
+.. _`container forum`: https://discord.com/channels/799879767196958751/1028297229980668015
+.. _`container forum`: https://discord.com/channels/799879767196958751/1028297229980668015
+.. _`container forum`: https://discord.com/channels/799879767196958751/1028297229980668015
+.. _`container forum`: https://discord.com/channels/799879767196958751/1028297229980668015
+.. _`container channel`: https://discord.com/channels/799879767196958751/1000042831928381591
+.. _`container channel`: https://discord.com/channels/799879767196958751/1000042831928381591
+.. _`container channel`: https://discord.com/channels/799879767196958751/1000042831928381591
+.. _`container channel`: https://discord.com/channels/799879767196958751/1000042831928381591
+.. _`container channel`: https://discord.com/channels/799879767196958751/1000042831928381591
+.. _`container channel`: https://discord.com/channels/799879767196958751/1000042831928381591
+.. _`container channel`: https://discord.com/channels/799879767196958751/1000042831928381591
+This should have hopefully given you an overview of the container submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `container channel`_ or in the `container forum`_!

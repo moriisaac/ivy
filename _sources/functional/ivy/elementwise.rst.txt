@@ -1,0 +1,96 @@
+Elementwise
+===========
+
+.. automodule:: ivy.functional.ivy.elementwise
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Elementwise
+
+   elementwise/abs.rst
+   elementwise/acos.rst
+   elementwise/acosh.rst
+   elementwise/add.rst
+   elementwise/asin.rst
+   elementwise/asinh.rst
+   elementwise/atan.rst
+   elementwise/atan2.rst
+   elementwise/atanh.rst
+   elementwise/bitwise_and.rst
+   elementwise/bitwise_invert.rst
+   elementwise/bitwise_left_shift.rst
+   elementwise/bitwise_or.rst
+   elementwise/bitwise_right_shift.rst
+   elementwise/bitwise_xor.rst
+   elementwise/ceil.rst
+   elementwise/cos.rst
+   elementwise/cosh.rst
+   elementwise/divide.rst
+   elementwise/equal.rst
+   elementwise/exp.rst
+   elementwise/expm1.rst
+   elementwise/floor.rst
+   elementwise/floor_divide.rst
+   elementwise/greater.rst
+   elementwise/greater_equal.rst
+   elementwise/less_equal.rst
+   elementwise/multiply.rst
+   elementwise/isfinite.rst
+   elementwise/isinf.rst
+   elementwise/isnan.rst
+   elementwise/less.rst
+   elementwise/log.rst
+   elementwise/log10.rst
+   elementwise/log1p.rst
+   elementwise/log2.rst
+   elementwise/logaddexp.rst
+   elementwise/logical_and.rst
+   elementwise/logical_not.rst
+   elementwise/logical_or.rst
+   elementwise/logical_xor.rst
+   elementwise/negative.rst
+   elementwise/not_equal.rst
+   elementwise/positive.rst
+   elementwise/pow.rst
+   elementwise/remainder.rst
+   elementwise/round.rst
+   elementwise/sign.rst
+   elementwise/sin.rst
+   elementwise/sinh.rst
+   elementwise/sqrt.rst
+   elementwise/square.rst
+   elementwise/subtract.rst
+   elementwise/tan.rst
+   elementwise/tanh.rst
+   elementwise/trunc.rst
+   elementwise/erf.rst
+   elementwise/maximum.rst
+   elementwise/minimum.rst
+   elementwise/reciprocal.rst
+   elementwise/deg2rad.rst
+   elementwise/rad2deg.rst
+   elementwise/trunc_divide.rst
+   elementwise/isreal.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`elementwise forum`: https://discord.com/channels/799879767196958751/1028298919488278589
+.. _`elementwise forum`: https://discord.com/channels/799879767196958751/1028298919488278589
+.. _`elementwise forum`: https://discord.com/channels/799879767196958751/1028298919488278589
+.. _`elementwise forum`: https://discord.com/channels/799879767196958751/1028298919488278589
+.. _`elementwise forum`: https://discord.com/channels/799879767196958751/1028298919488278589
+.. _`elementwise forum`: https://discord.com/channels/799879767196958751/1028298919488278589
+.. _`elementwise forum`: https://discord.com/channels/799879767196958751/1028298919488278589
+.. _`elementwise channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`elementwise channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`elementwise channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`elementwise channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`elementwise channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`elementwise channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`elementwise channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+This should have hopefully given you an overview of the elementwise submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `elementwise channel`_ or in the `elementwise forum`_!

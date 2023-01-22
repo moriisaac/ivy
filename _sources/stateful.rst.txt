@@ -1,0 +1,25 @@
+Framework classes
+=================
+
+.. automodule:: ivy.stateful
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Framework Classes
+
+   stateful/activations.rst
+   stateful/converters.rst
+   stateful/helpers.rst
+   stateful/initializers.rst
+   stateful/layers.rst
+   stateful/module.rst
+   stateful/norms.rst
+   stateful/optimizers.rst
+   stateful/sequential.rst
+

@@ -1,0 +1,35 @@
+Meta
+====
+
+.. automodule:: ivy.functional.ivy.meta
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Meta
+
+   meta/fomaml_step.rst
+   meta/reptile_step.rst
+   meta/maml_step.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`meta forum`: https://discord.com/channels/799879767196958751/1028299213701914674
+.. _`meta forum`: https://discord.com/channels/799879767196958751/1028299213701914674
+.. _`meta forum`: https://discord.com/channels/799879767196958751/1028299213701914674
+.. _`meta forum`: https://discord.com/channels/799879767196958751/1028299213701914674
+.. _`meta forum`: https://discord.com/channels/799879767196958751/1028299213701914674
+.. _`meta forum`: https://discord.com/channels/799879767196958751/1028299213701914674
+.. _`meta forum`: https://discord.com/channels/799879767196958751/1028299213701914674
+.. _`meta channel`: https://discord.com/channels/799879767196958751/1000044106959044659
+.. _`meta channel`: https://discord.com/channels/799879767196958751/1000044106959044659
+.. _`meta channel`: https://discord.com/channels/799879767196958751/1000044106959044659
+.. _`meta channel`: https://discord.com/channels/799879767196958751/1000044106959044659
+.. _`meta channel`: https://discord.com/channels/799879767196958751/1000044106959044659
+.. _`meta channel`: https://discord.com/channels/799879767196958751/1000044106959044659
+.. _`meta channel`: https://discord.com/channels/799879767196958751/1000044106959044659
+This should have hopefully given you an overview of the meta submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `meta channel`_ or in the `meta forum`_!

@@ -1,0 +1,51 @@
+Nest
+====
+
+.. automodule:: ivy.functional.ivy.nest
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Nest
+
+   nest/index_nest.rst
+   nest/prune_nest_at_index.rst
+   nest/set_nest_at_index.rst
+   nest/insert_into_nest_at_index.rst
+   nest/map_nest_at_index.rst
+   nest/multi_index_nest.rst
+   nest/prune_nest_at_indices.rst
+   nest/set_nest_at_indices.rst
+   nest/insert_into_nest_at_indices.rst
+   nest/map_nest_at_indices.rst
+   nest/nested_argwhere.rst
+   nest/all_nested_indices.rst
+   nest/map.rst
+   nest/nested_map.rst
+   nest/nested_any.rst
+   nest/copy_nest.rst
+   nest/nested_multi_map.rst
+   nest/duplicate_array_index_chains.rst
+   nest/prune_empty.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`nest forum`: https://discord.com/channels/799879767196958751/1028299238964219924
+.. _`nest forum`: https://discord.com/channels/799879767196958751/1028299238964219924
+.. _`nest forum`: https://discord.com/channels/799879767196958751/1028299238964219924
+.. _`nest forum`: https://discord.com/channels/799879767196958751/1028299238964219924
+.. _`nest forum`: https://discord.com/channels/799879767196958751/1028299238964219924
+.. _`nest forum`: https://discord.com/channels/799879767196958751/1028299238964219924
+.. _`nest forum`: https://discord.com/channels/799879767196958751/1028299238964219924
+.. _`nest channel`: https://discord.com/channels/799879767196958751/1000044136000393326
+.. _`nest channel`: https://discord.com/channels/799879767196958751/1000044136000393326
+.. _`nest channel`: https://discord.com/channels/799879767196958751/1000044136000393326
+.. _`nest channel`: https://discord.com/channels/799879767196958751/1000044136000393326
+.. _`nest channel`: https://discord.com/channels/799879767196958751/1000044136000393326
+.. _`nest channel`: https://discord.com/channels/799879767196958751/1000044136000393326
+.. _`nest channel`: https://discord.com/channels/799879767196958751/1000044136000393326
+This should have hopefully given you an overview of the nest submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `nest channel`_ or in the `nest forum`_!

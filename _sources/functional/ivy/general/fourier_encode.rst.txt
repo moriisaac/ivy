@@ -1,0 +1,38 @@
+fourier_encode
+==============
+
+.. autofunction:: ivy.functional.ivy.general.fourier_encode
+
+.. autofunction:: ivy.array.array_methods.fourier_encode
+
+.. autofunction:: ivy.container.container_methods.static_fourier_encode
+
+.. autofunction:: ivy.container.container_methods.fourier_encode
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: fourier_encode
+
+   fourier_encode/fourier_encode_functional.rst
+   fourier_encode/fourier_encode_array.rst
+   fourier_encode/fourier_encode_container.rst
+   fourier_encode/static_fourier_encode_container.rst
+

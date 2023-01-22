@@ -1,0 +1,38 @@
+var
+===
+
+.. autofunction:: ivy.functional.ivy.statistical.var
+
+.. autofunction:: ivy.array.array_methods.var
+
+.. autofunction:: ivy.container.container_methods.static_var
+
+.. autofunction:: ivy.container.container_methods.var
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: var
+
+   var/var_functional.rst
+   var/static_var_container.rst
+   var/var_array.rst
+   var/var_container.rst
+

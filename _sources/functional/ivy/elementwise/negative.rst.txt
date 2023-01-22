@@ -1,0 +1,38 @@
+negative
+========
+
+.. autofunction:: ivy.functional.ivy.elementwise.negative
+
+.. autofunction:: ivy.array.array_methods.negative
+
+.. autofunction:: ivy.container.container_methods.negative
+
+.. autofunction:: ivy.container.container_methods.static_negative
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: negative
+
+   negative/negative_functional.rst
+   negative/negative_array.rst
+   negative/negative_container.rst
+   negative/static_negative_container.rst
+

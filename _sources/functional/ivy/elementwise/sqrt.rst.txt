@@ -1,0 +1,38 @@
+sqrt
+====
+
+.. autofunction:: ivy.functional.ivy.elementwise.sqrt
+
+.. autofunction:: ivy.array.array_methods.sqrt
+
+.. autofunction:: ivy.container.container_methods.sqrt
+
+.. autofunction:: ivy.container.container_methods.static_sqrt
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: sqrt
+
+   sqrt/sqrt_functional.rst
+   sqrt/sqrt_array.rst
+   sqrt/sqrt_container.rst
+   sqrt/static_sqrt_container.rst
+

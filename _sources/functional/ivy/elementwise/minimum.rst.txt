@@ -1,0 +1,38 @@
+minimum
+=======
+
+.. autofunction:: ivy.functional.ivy.elementwise.minimum
+
+.. autofunction:: ivy.array.array_methods.minimum
+
+.. autofunction:: ivy.container.container_methods.static_minimum
+
+.. autofunction:: ivy.container.container_methods.minimum
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: minimum
+
+   minimum/minimum_functional.rst
+   minimum/minimum_array.rst
+   minimum/minimum_container.rst
+   minimum/static_minimum_container.rst
+

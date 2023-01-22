@@ -1,0 +1,38 @@
+leaky_relu
+==========
+
+.. autofunction:: ivy.functional.ivy.activations.leaky_relu
+
+.. autofunction:: ivy.array.array_methods.leaky_relu
+
+.. autofunction:: ivy.container.container_methods.static_leaky_relu
+
+.. autofunction:: ivy.container.container_methods.leaky_relu
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: leaky_relu
+
+   leaky_relu/leaky_relu_functional.rst
+   leaky_relu/leaky_relu_array.rst
+   leaky_relu/leaky_relu_container.rst
+   leaky_relu/static_leaky_relu_container.rst
+

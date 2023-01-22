@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ivy.array.statistical &mdash; Ivy 1.0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="icon" type="image/png" href="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/ivy_logo_only.png?raw=true">
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Ivy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_work.html">Related Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../deep_dive.html">Deep Dive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Functions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/experimental.html">Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/constants.html">Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/control_flow_ops.html">Control flow ops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/data_type.html">Data type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/experimental.html">Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/meta.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/nest.html">Nest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../functional/ivy/utility.html">Utility</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_classes/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_classes/array.html">Array</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/optimizers.html">Optimizers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/module.html">Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/initializers.html">Initializers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/converters.html">Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/sequential.html">Sequential</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/helpers.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/norms.html">Norms</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nested array</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nested_array/nested_array.html">Nested array</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ivy"">Ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mech"">Ivy mech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../vision"">Ivy vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot"">Ivy robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gym"">Ivy gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../memory"">Ivy memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../builder"">Ivy builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../models"">Ivy models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ecosystem"">Ivy ecosystem</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Ivy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>ivy.array.statistical</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for ivy.array.statistical</h1><div class="highlight"><pre>
+<span></span><span class="c1"># global</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Sequence</span>
+<span class="kn">import</span> <span class="nn">abc</span>
+
+<span class="c1"># local</span>
+<span class="kn">import</span> <span class="nn">ivy</span>
+
+<span class="c1"># ToDo: implement all methods here as public instance methods</span>
+
+
+<div class="viewcode-block" id="ArrayWithStatistical"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical">[docs]</a><span class="k">class</span> <span class="nc">ArrayWithStatistical</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
+<div class="viewcode-block" id="ArrayWithStatistical.min"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.min">[docs]</a>    <span class="k">def</span> <span class="nf">min</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculates the minimum value of the input array ``x``.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x</span>
+<span class="sd">            Input array. Should have a real-valued data type.</span>
+<span class="sd">        axis</span>
+<span class="sd">            axis or axes along which minimum values must be computed.</span>
+<span class="sd">            By default, the minimum value must be computed over the</span>
+<span class="sd">            entire array. If a tuple of integers,minimum values must be</span>
+<span class="sd">            computed over multiple axes. Default: ``None``.</span>
+
+<span class="sd">        keepdims</span>
+<span class="sd">            optional boolean, if ``True``, the reduced axes (dimensions)</span>
+<span class="sd">            must be included in the result as singleton dimensions, and,</span>
+<span class="sd">            accordingly, the result must be compatible with the input</span>
+<span class="sd">            array (see :ref:`broadcasting`). Otherwise, if ``False``, the</span>
+<span class="sd">            reduced axes (dimensions) must not be included in the</span>
+<span class="sd">            result. Default: ``False``.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output array, for writing the result to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            if the minimum value was computed over the entire array, a</span>
+<span class="sd">            zero-dimensional array containing the minimum value; otherwise,</span>
+<span class="sd">            a non-zero-dimensional array containing the minimum values.</span>
+<span class="sd">            The returned array must have the same data type</span>
+<span class="sd">            as ``x``.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        With :code:`ivy.Array` input:</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([3., 4., 5.])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.min()</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(3.)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[-1, 0, 1], [2, 3, 4]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.min(axis=1)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([-1,  2])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([0.1, 1.1, 2.1])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.array(0.)</span>
+<span class="sd">        &gt;&gt;&gt; x.min(out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(0.1)</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ArrayWithStatistical.max"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.max">[docs]</a>    <span class="k">def</span> <span class="nf">max</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ivy.Array instance method variant of ivy.max. This method simply</span>
+<span class="sd">        wraps the function, and so the docstring for ivy.max also applies</span>
+<span class="sd">        to this method with minimal changes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x</span>
+<span class="sd">            input array. Should have a numeric data type.</span>
+<span class="sd">        axis</span>
+<span class="sd">            axis or axes along which maximum values must be computed.</span>
+<span class="sd">            By default, the maximum value must be computed over the</span>
+<span class="sd">            entire array. If a tuple of integers, maximum values must</span>
+<span class="sd">            be computed over multiple axes. Default: ``None``.</span>
+<span class="sd">        keepdims</span>
+<span class="sd">            if ``True``, the reduced axes (dimensions) must be included</span>
+<span class="sd">            in the result as singleton dimensions, and, accordingly, the</span>
+<span class="sd">            result must be compatible with the input array</span>
+<span class="sd">            (see :ref:`broadcasting`). Otherwise, if ``False``, the reduced axes</span>
+<span class="sd">            (dimensions) must not be included in the result. Default: ``False``.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output array, for writing the result to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            if the maximum value was computed over the entire array,</span>
+<span class="sd">            a zero-dimensional array containing the maximum value;</span>
+<span class="sd">            otherwise, a non-zero-dimensional array</span>
+<span class="sd">            containing the maximum values. The returned array must</span>
+<span class="sd">            have the same data type</span>
+<span class="sd">            as ``x``.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        With :class:`ivy.Array` input:</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([1, 2, 3])</span>
+<span class="sd">        &gt;&gt;&gt; z = x.max()</span>
+<span class="sd">        &gt;&gt;&gt; print(z)</span>
+<span class="sd">        ivy.array(3)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([0, 1, 2])</span>
+<span class="sd">        &gt;&gt;&gt; z = ivy.array([0])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.max(out=z)</span>
+<span class="sd">        &gt;&gt;&gt; print(z)</span>
+<span class="sd">        ivy.array(2)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[0, 1, 2], [4, 6, 10]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.max(axis=0, keepdims=True)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([[4, 6, 10]])</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ArrayWithStatistical.mean"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.mean">[docs]</a>    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;ivy.Array instance method variant of ivy.mean. This method simply</span>
+<span class="sd">        wraps the function, and so the docstring for ivy.mean also applies</span>
+<span class="sd">        to this method with minimal changes.</span>
+
+<span class="sd">        **Special Cases**</span>
+
+<span class="sd">        Let ``N`` equal the number of elements over which to compute the</span>
+<span class="sd">        arithmetic mean.</span>
+<span class="sd">        -   If ``N`` is ``0``, the arithmetic mean is ``NaN``.</span>
+<span class="sd">        -   If ``x_i`` is ``NaN``, the arithmetic mean is ``NaN`` (i.e., ``NaN``</span>
+<span class="sd">            values propagate).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self</span>
+<span class="sd">            input array. Should have a floating-point data type.</span>
+<span class="sd">        axis</span>
+<span class="sd">            axis or axes along which arithmetic means must be computed. By default,</span>
+<span class="sd">            the mean must be computed over the entire array. If a Sequence of</span>
+<span class="sd">            integers, arithmetic means must be computed over multiple axes.</span>
+<span class="sd">            Default: ``None``.</span>
+<span class="sd">        keepdims</span>
+<span class="sd">            bool, if ``True``, the reduced axes (dimensions) must be included in the</span>
+<span class="sd">            result as singleton dimensions, and, accordingly, the result must be</span>
+<span class="sd">            compatible with the input array (see :ref:`broadcasting`). Otherwise,</span>
+<span class="sd">            if ``False``, the reduced axes (dimensions) must not be included in</span>
+<span class="sd">            the result. Default: ``False``.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output array, for writing the result to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            array, if the arithmetic mean was computed over the entire array, a</span>
+<span class="sd">            zero-dimensional array containing the arithmetic mean; otherwise, a</span>
+<span class="sd">            non-zero-dimensional array containing the arithmetic means.</span>
+<span class="sd">            The returned array must have the same data type as ``x``.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        With :class:`ivy.Array` input:</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([3., 4., 5.])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.mean()</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(4.)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([-1, 0, 1])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.mean(x)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(0.)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([0.1, 1.1, 2.1])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.array(0.)</span>
+<span class="sd">        &gt;&gt;&gt; x.mean(out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(1.1)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([1., 2., 3., 0., -1.])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.array(0.)</span>
+<span class="sd">        &gt;&gt;&gt; ivy.mean(x, out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(1.)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[-0.5, 1., 2.], [0.0, 1.1, 2.2]])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.array([0., 0., 0.])</span>
+<span class="sd">        &gt;&gt;&gt; x.mean(axis=0, keepdims=True, out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([[-0.25      ,  1.04999995,  2.0999999 ]])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[0., 1., 2.], [3., 4., 5.]])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.array([0., 0.])</span>
+<span class="sd">        &gt;&gt;&gt; ivy.mean(x, axis=1, out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([1., 4.])</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ArrayWithStatistical.var"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.var">[docs]</a>    <span class="k">def</span> <span class="nf">var</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">correction</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ivy.Array instance method variant of ivy.var. This method simply</span>
+<span class="sd">        wraps the function, and so the docstring for ivy.var also applies</span>
+<span class="sd">        to this method with minimal changes.</span>
+
+<span class="sd">        **Special Cases**</span>
+
+<span class="sd">        Let N equal the number of elements over which to compute the variance.</span>
+
+<span class="sd">        If N - correction is less than or equal to 0, the variance is NaN.</span>
+
+<span class="sd">        If x_i is NaN, the variance is NaN (i.e., NaN values propagate).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self</span>
+<span class="sd">            input array. Should have a floating-point data type.</span>
+<span class="sd">        axis</span>
+<span class="sd">            axis or axes along which variances must be computed. By default, the</span>
+<span class="sd">            variance must be computed over the entire array. If a tuple of integers,</span>
+<span class="sd">            variances must be computed over multiple axes. Default: ``None``.</span>
+<span class="sd">        correction</span>
+<span class="sd">            degrees of freedom adjustment. Setting this parameter to a value other</span>
+<span class="sd">            than 0 has the effect of adjusting the divisor during the calculation</span>
+<span class="sd">            of the variance according to N-c where N corresponds to the total</span>
+<span class="sd">            number of elements over which the variance is computed and c corresponds</span>
+<span class="sd">            to the provided degrees of freedom adjustment. When computing the variance</span>
+<span class="sd">            of a population, setting this parameter to 0 is the standard choice</span>
+<span class="sd">            (i.e., the provided array contains data constituting an entire population).</span>
+<span class="sd">            When computing the unbiased sample variance, setting this parameter to 1</span>
+<span class="sd">            is the standard choice (i.e., the provided array contains data sampled</span>
+<span class="sd">            from a larger population; this is commonly referred to as Bessel&#39;s</span>
+<span class="sd">            correction). Default: ``0``.</span>
+<span class="sd">        keepdims</span>
+<span class="sd">            if True, the reduced axes (dimensions) must be included in the result as</span>
+<span class="sd">            singleton dimensions, and, accordingly, the result must be compatible</span>
+<span class="sd">            with the input array (see Broadcasting). Otherwise, if False, the</span>
+<span class="sd">            reduced axes (dimensions) must not be included in the result.</span>
+<span class="sd">            Default: ``False``.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output array, for writing the result to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            if the variance was computed over the entire array, a zero-dimensional array</span>
+<span class="sd">            containing the variance; otherwise, a non-zero-dimensional array containing</span>
+<span class="sd">            the variances. The returned array must have the same data type as x.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[0.0, 1.0, 2.0],</span>
+<span class="sd">        ...                [3.0, 4.0, 5.0],</span>
+<span class="sd">        ...                [6.0, 7.0, 8.0]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.var()</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(6.6666665)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[0.0, 1.0, 2.0],</span>
+<span class="sd">        ...                [3.0, 4.0, 5.0],</span>
+<span class="sd">        ...                [6.0, 7.0, .08]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.var(axis=0)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([6., 6., 4.1])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[0.0, 1.0, 2.0],</span>
+<span class="sd">        ...                [3.0, 4.0, 5.0],</span>
+<span class="sd">        ...                [6.0, 7.0, .08]])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.array([0., 0., 0.])</span>
+<span class="sd">        &gt;&gt;&gt; x.var(axis=1, out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([0.667, 0.667, 9.33 ])</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">var</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">correction</span><span class="o">=</span><span class="n">correction</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ArrayWithStatistical.prod"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.prod">[docs]</a>    <span class="k">def</span> <span class="nf">prod</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;ivy.array instance method variant of ivy.prod.</span>
+<span class="sd">        This method simply wraps the function, and so</span>
+<span class="sd">        the docstring for ivy.prod also applies to this method</span>
+<span class="sd">        with minimal changes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self</span>
+<span class="sd">            input array. Should have a floating-point data type.</span>
+<span class="sd">        axis</span>
+<span class="sd">            axis or axes along which products must be computed. By default,</span>
+<span class="sd">            the product must be computed over the entire array. If a</span>
+<span class="sd">            tuple of integers, products must be computed over multiple</span>
+<span class="sd">            axes. Default: ``None``.</span>
+<span class="sd">        keepdims</span>
+<span class="sd">            bool, if True, the reduced axes (dimensions) must be</span>
+<span class="sd">            included in the result as singleton dimensions, and,</span>
+<span class="sd">            accordingly, the result must be compatible with the</span>
+<span class="sd">            input array (see Broadcasting). Otherwise, if False,</span>
+<span class="sd">            the reduced axes (dimensions) must not be included in</span>
+<span class="sd">            the result. Default: ``False``.</span>
+<span class="sd">        dtype</span>
+<span class="sd">            data type of the returned array.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output array, for writing the result to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            container, if the product was computed over the entire array,</span>
+<span class="sd">            a zero-dimensional array containing the product;</span>
+<span class="sd">            otherwise, a non-zero-dimensional array containing the products.</span>
+<span class="sd">            The returned array must have the same data type as ``self``.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        With: class: `ivy.Array` input:</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([1, 2, 3])</span>
+<span class="sd">        &gt;&gt;&gt; z = x.prod()</span>
+<span class="sd">        &gt;&gt;&gt; print(z)</span>
+<span class="sd">        ivy.array(6)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([1, 0, 3])</span>
+<span class="sd">        &gt;&gt;&gt; z = x.prod()</span>
+<span class="sd">        &gt;&gt;&gt; print(z)</span>
+<span class="sd">        ivy.array(0)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[3., 4., 5.]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.prod(axis=1)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([60.])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([2., 1.])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.array(0.)</span>
+<span class="sd">        &gt;&gt;&gt; x.prod(out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(2.)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[-1., -2.], [3., 3.]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.prod(axis=1)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([2., 9.])</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ArrayWithStatistical.sum"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.sum">[docs]</a>    <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ArrayWithStatistical.std"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.std">[docs]</a>    <span class="k">def</span> <span class="nf">std</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">correction</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;ivy.array instance method variant of ivy.std.</span>
+<span class="sd">        This method simply wraps the function, and so</span>
+<span class="sd">        the docstring for ivy.std also applies to this method</span>
+<span class="sd">        with minimal changes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self</span>
+<span class="sd">            input array.</span>
+<span class="sd">        axis</span>
+<span class="sd">            axis or axes along which standard deviation must be computed.</span>
+<span class="sd">            By default, the product must be computed over the entire array.</span>
+<span class="sd">            If a tuple of integers, products must be computed over multiple</span>
+<span class="sd">            axes. Default: ``None``.</span>
+<span class="sd">        correction</span>
+<span class="sd">            degrees of freedom adjustment. Setting this parameter to a</span>
+<span class="sd">            value other than ``0`` has the effect of adjusting the</span>
+<span class="sd">            divisor during the calculation of the standard deviation</span>
+<span class="sd">            according to ``N-c`` where ``N`` corresponds to the total</span>
+<span class="sd">            number of elements over which the standard deviation is</span>
+<span class="sd">            computed and ``c`` corresponds to the provided degrees of</span>
+<span class="sd">            freedom adjustment. When computing the standard deviation</span>
+<span class="sd">            of a population, setting this parameter to ``0`` is the</span>
+<span class="sd">            standard choice (i.e., the provided array contains data</span>
+<span class="sd">            constituting an entire population). When computing</span>
+<span class="sd">            the corrected sample standard deviation, setting this</span>
+<span class="sd">            parameter to ``1`` is the standard choice (i.e., the</span>
+<span class="sd">            provided array contains data sampled from a larger</span>
+<span class="sd">            population; this is commonly referred to as Bessel&#39;s</span>
+<span class="sd">            correction). Default: ``0``.</span>
+
+<span class="sd">        keepdims</span>
+<span class="sd">            bool, if True, the reduced axes (dimensions) must be</span>
+<span class="sd">            included in the result as singleton dimensions, and,</span>
+<span class="sd">            accordingly, the result must be compatible with the</span>
+<span class="sd">            input array (see Broadcasting). Otherwise, if False,</span>
+<span class="sd">            the reduced axes (dimensions) must not be included in</span>
+<span class="sd">            the result. Default: ``False``.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output array, for writing the result to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            container, if the product was computed over the entire array,</span>
+<span class="sd">            a zero-dimensional array containing the product;</span>
+<span class="sd">            otherwise, a non-zero-dimensional array containing the products.</span>
+<span class="sd">            The returned array must have the same data type as ``self``.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        With: class: `ivy.Array` input:</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([-1., 0., 1.])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.std()</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(0.8164966)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([-1., 0., 1.])</span>
+<span class="sd">        &gt;&gt;&gt; z = x.std(correction=1)</span>
+<span class="sd">        &gt;&gt;&gt; print(z)</span>
+<span class="sd">        ivy.array(1.)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[0., 4.]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.std(keepdims=True)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([[2.]])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([2., 1.])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.array(0.)</span>
+<span class="sd">        &gt;&gt;&gt; x.std(out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(0.5)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[-1., -2.], [3., 3.]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.std(axis=1)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([1.5, 1. ])</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">std</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">correction</span><span class="o">=</span><span class="n">correction</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span>
+        <span class="p">)</span></div>
+
+    <span class="c1"># Extra #</span>
+    <span class="c1"># ----- #</span>
+
+<div class="viewcode-block" id="ArrayWithStatistical.cumsum"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.cumsum">[docs]</a>    <span class="k">def</span> <span class="nf">cumsum</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">exclusive</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">reverse</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ivy.Array instance method variant of ivy.cumsum. This method simply wraps the</span>
+<span class="sd">        function, and so the docstring for ivy.cumsum also applies to this method</span>
+<span class="sd">        with minimal changes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self</span>
+<span class="sd">            Input array to apply cumsum.</span>
+<span class="sd">        axis</span>
+<span class="sd">            Axis along which the cumulative sum is computed. Default is ``0``.</span>
+<span class="sd">        exclusive</span>
+<span class="sd">            Whether to perform cumsum exclusively. Default is ``False``.</span>
+<span class="sd">        reverse</span>
+<span class="sd">            Whether to perform the cumsum from last to first element in the selected</span>
+<span class="sd">            axis. Default is ``False`` (from first to last element)</span>
+<span class="sd">        dtype</span>
+<span class="sd">            Data type of the returned array. Default is ``None``.</span>
+<span class="sd">        out</span>
+<span class="sd">            Optional array container. Default is ``None``.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            Array which holds the result of applying cumsum at each</span>
+<span class="sd">            original array elements along the specified axis.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([1, 2, 3, 4, 5])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.cumsum()</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([ 1,  3,  6, 10, 15])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([2, 6, 4, 10])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.cumsum(axis=0, exclusive=False, reverse=True, dtype=&#39;float64&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([22., 20., 14., 10.])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[2, 3], [4, 6], [8, 12]])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.zeros((3, 2))</span>
+<span class="sd">        &gt;&gt;&gt; x.cumsum(axis=1, exclusive=True, reverse=False, out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([[0, 2],</span>
+<span class="sd">                   [0, 4],</span>
+<span class="sd">                   [0, 8]])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[1, 5, 2],</span>
+<span class="sd">        ...                [4, 3, 0],</span>
+<span class="sd">        ...                [4, 8, 2]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.cumsum(axis=1, exclusive=True, reverse=True)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([[ 7,  2,  0],</span>
+<span class="sd">                   [ 3,  0,  0],</span>
+<span class="sd">                   [10,  2,  0]])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[1, 5, 10], [4, 8, 10], [2, 3, 5]])</span>
+<span class="sd">        &gt;&gt;&gt; x.cumsum(axis=0, out=x)</span>
+<span class="sd">        &gt;&gt;&gt; print(x)</span>
+<span class="sd">        ivy.array([[ 1,  5, 10],</span>
+<span class="sd">                   [ 5, 13, 20],</span>
+<span class="sd">                   [ 7, 16, 25]])</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">exclusive</span><span class="p">,</span> <span class="n">reverse</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ArrayWithStatistical.cumprod"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.cumprod">[docs]</a>    <span class="k">def</span> <span class="nf">cumprod</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">exclusive</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">reverse</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ivy.Array instance method variant of ivy.cumprod. This method simply wraps the</span>
+<span class="sd">        function, and so the docstring for ivy.cumprod also applies to this method</span>
+<span class="sd">        with minimal changes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self</span>
+<span class="sd">            input array</span>
+<span class="sd">        axis</span>
+<span class="sd">            int, axis along which to take the cumulative product. Default is ``0``.</span>
+<span class="sd">        exclusive</span>
+<span class="sd">            optional bool, whether to exclude the first value of the input array.</span>
+<span class="sd">            Default is ``False``.</span>
+<span class="sd">        reverse</span>
+<span class="sd">            Whether to perform the cumprod from last to first element in the selected</span>
+<span class="sd">            axis. Default is ``False`` (from first to last element)</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output array, for writing the result to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            Input array with cumulatively multiplied elements along the specified axis.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([1, 2, 3, 4, 5])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.cumprod()</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([1, 2, 6, 24, 120])</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[2, 3], [5, 7], [11, 13]])</span>
+<span class="sd">        &gt;&gt;&gt; y = ivy.zeros((3, 2), dtype=&quot;int32&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; x.cumprod(axis=1, exclusive=True, out=y)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array([[0, 0],</span>
+<span class="sd">                   [0, 0],</span>
+<span class="sd">                   [0, 0]])</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">cumprod</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span>
+            <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span>
+            <span class="n">exclusive</span><span class="o">=</span><span class="n">exclusive</span><span class="p">,</span>
+            <span class="n">reverse</span><span class="o">=</span><span class="n">reverse</span><span class="p">,</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
+            <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ArrayWithStatistical.einsum"><a class="viewcode-back" href="../../../data_classes/array/statistical/ArrayWithStatistical.html#ivy.array.statistical.ArrayWithStatistical.einsum">[docs]</a>    <span class="k">def</span> <span class="nf">einsum</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+        <span class="n">equation</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+        <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ivy.Array instance method variant of ivy.einsum. This method simply wraps the</span>
+<span class="sd">        function, and so the docstring for ivy.einsum also applies to this method</span>
+<span class="sd">        with minimal changes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        equation</span>
+<span class="sd">            A str describing the contraction, in the same format as numpy.einsum.</span>
+<span class="sd">        operands</span>
+<span class="sd">            seq of arrays, the inputs to contract (each one an ivy.Array), whose shapes</span>
+<span class="sd">            should be consistent with equation.</span>
+<span class="sd">        out</span>
+<span class="sd">            optional output array, for writing the result to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret</span>
+<span class="sd">            The array with sums computed.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[0, 1, 2], [3, 4, 5], [6, 7, 8]])</span>
+<span class="sd">        &gt;&gt;&gt; y = x.einsum(&#39;ii&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; print(y)</span>
+<span class="sd">        ivy.array(12)</span>
+
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[0, 1, 2], [3, 4, 5], [6, 7, 8]])</span>
+<span class="sd">        &gt;&gt;&gt; z = x.einsum(&#39;ij -&gt; j&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; print(z)</span>
+<span class="sd">        ivy.array([ 9, 12, 15])</span>
+
+<span class="sd">        &gt;&gt;&gt; A = ivy.array([0, 1, 2])</span>
+<span class="sd">        &gt;&gt;&gt; B = ivy.array([[ 0,  1,  2,  3],</span>
+<span class="sd">        ...                [ 4,  5,  6,  7],</span>
+<span class="sd">        ...                [ 8,  9, 10, 11]])</span>
+<span class="sd">        &gt;&gt;&gt; C = A.einsum(&#39;i,ij-&gt;i&#39;, B)</span>
+<span class="sd">        &gt;&gt;&gt; print(C)</span>
+<span class="sd">        ivy.array([ 0, 22, 76])</span>
+
+<span class="sd">        &gt;&gt;&gt; A = ivy.array([[1, 1, 1],</span>
+<span class="sd">        ...                [2, 2, 2],</span>
+<span class="sd">        ...                [5, 5, 5]])</span>
+<span class="sd">        &gt;&gt;&gt; B = ivy.array([[0, 1, 0],</span>
+<span class="sd">        ...                [1, 1, 0],</span>
+<span class="sd">        ...                [1, 1, 1]])</span>
+<span class="sd">        &gt;&gt;&gt; C = A.einsum(&#39;ij,jk-&gt;ik&#39;, B)</span>
+<span class="sd">        &gt;&gt;&gt; print(C)</span>
+<span class="sd">        ivy.array([[ 2,  3,  1],</span>
+<span class="sd">               [ 4,  6,  2],</span>
+<span class="sd">               [10, 15,  5]])</span>
+
+<span class="sd">        &gt;&gt;&gt; A = ivy.arange(10)</span>
+<span class="sd">        &gt;&gt;&gt; B = A.einsum(&#39;i-&gt;&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; print(B)</span>
+<span class="sd">        ivy.array(45)</span>
+
+<span class="sd">        &gt;&gt;&gt; A = ivy.arange(10)</span>
+<span class="sd">        &gt;&gt;&gt; B = ivy.arange(5, 15)</span>
+<span class="sd">        &gt;&gt;&gt; C = A.einsum(&#39;i,i-&gt;i&#39;, B)</span>
+<span class="sd">        &gt;&gt;&gt; print(C)</span>
+<span class="sd">        ivy.array([  0,   6,  14,  24,  36,  50,  66,  84, 104, 126])</span>
+
+<span class="sd">        &gt;&gt;&gt; A = ivy.arange(10)</span>
+<span class="sd">        &gt;&gt;&gt; B = ivy.arange(5, 15)</span>
+<span class="sd">        &gt;&gt;&gt; C = A.einsum(&#39;i,i-&gt;&#39;, B) # or just use &#39;i,i&#39;</span>
+<span class="sd">        &gt;&gt;&gt; print(C)</span>
+<span class="sd">        ivy.array(510)</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,)</span> <span class="o">+</span> <span class="n">args</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2023, Ivy Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

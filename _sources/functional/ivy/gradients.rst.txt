@@ -1,0 +1,47 @@
+Gradients
+=========
+
+.. automodule:: ivy.functional.ivy.gradients
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Gradients
+
+   gradients/with_grads.rst
+   gradients/set_with_grads.rst
+   gradients/unset_with_grads.rst
+   gradients/stop_gradient.rst
+   gradients/execute_with_gradients.rst
+   gradients/value_and_grad.rst
+   gradients/jac.rst
+   gradients/grad.rst
+   gradients/adam_step.rst
+   gradients/optimizer_update.rst
+   gradients/gradient_descent_update.rst
+   gradients/lars_update.rst
+   gradients/adam_update.rst
+   gradients/lamb_update.rst
+   gradients/GradientTracking.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`gradients forum`: https://discord.com/channels/799879767196958751/1028299026501750826
+.. _`gradients forum`: https://discord.com/channels/799879767196958751/1028299026501750826
+.. _`gradients forum`: https://discord.com/channels/799879767196958751/1028299026501750826
+.. _`gradients forum`: https://discord.com/channels/799879767196958751/1028299026501750826
+.. _`gradients forum`: https://discord.com/channels/799879767196958751/1028299026501750826
+.. _`gradients forum`: https://discord.com/channels/799879767196958751/1028299026501750826
+.. _`gradients forum`: https://discord.com/channels/799879767196958751/1028299026501750826
+.. _`gradients channel`: https://discord.com/channels/799879767196958751/1000043921633722509
+.. _`gradients channel`: https://discord.com/channels/799879767196958751/1000043921633722509
+.. _`gradients channel`: https://discord.com/channels/799879767196958751/1000043921633722509
+.. _`gradients channel`: https://discord.com/channels/799879767196958751/1000043921633722509
+.. _`gradients channel`: https://discord.com/channels/799879767196958751/1000043921633722509
+.. _`gradients channel`: https://discord.com/channels/799879767196958751/1000043921633722509
+.. _`gradients channel`: https://discord.com/channels/799879767196958751/1000043921633722509
+This should have hopefully given you an overview of the gradients submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `gradients channel`_ or in the `gradients forum`_!

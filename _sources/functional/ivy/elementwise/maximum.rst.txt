@@ -1,0 +1,38 @@
+maximum
+=======
+
+.. autofunction:: ivy.functional.ivy.elementwise.maximum
+
+.. autofunction:: ivy.array.array_methods.maximum
+
+.. autofunction:: ivy.container.container_methods.maximum
+
+.. autofunction:: ivy.container.container_methods.static_maximum
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: maximum
+
+   maximum/maximum_functional.rst
+   maximum/maximum_array.rst
+   maximum/maximum_container.rst
+   maximum/static_maximum_container.rst
+

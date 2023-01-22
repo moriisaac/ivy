@@ -1,0 +1,43 @@
+Layers
+======
+
+.. automodule:: ivy.stateful.layers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Layers
+
+   layers/Linear.rst
+   layers/Dropout.rst
+   layers/MultiHeadAttention.rst
+   layers/Conv1D.rst
+   layers/Conv1DTranspose.rst
+   layers/Conv2D.rst
+   layers/Conv2DTranspose.rst
+   layers/DepthwiseConv2D.rst
+   layers/Conv3D.rst
+   layers/Conv3DTranspose.rst
+   layers/LSTM.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`layers forum`: https://discord.com/channels/799879767196958751/1028300805209604178
+.. _`layers forum`: https://discord.com/channels/799879767196958751/1028300805209604178
+.. _`layers forum`: https://discord.com/channels/799879767196958751/1028300805209604178
+.. _`layers forum`: https://discord.com/channels/799879767196958751/1028300805209604178
+.. _`layers forum`: https://discord.com/channels/799879767196958751/1028300805209604178
+.. _`layers forum`: https://discord.com/channels/799879767196958751/1028300805209604178
+.. _`layers forum`: https://discord.com/channels/799879767196958751/1028300805209604178
+.. _`layers channel`: https://discord.com/channels/799879767196958751/1000043206840426686
+.. _`layers channel`: https://discord.com/channels/799879767196958751/1000043206840426686
+.. _`layers channel`: https://discord.com/channels/799879767196958751/1000043206840426686
+.. _`layers channel`: https://discord.com/channels/799879767196958751/1000043206840426686
+.. _`layers channel`: https://discord.com/channels/799879767196958751/1000043206840426686
+.. _`layers channel`: https://discord.com/channels/799879767196958751/1000043206840426686
+.. _`layers channel`: https://discord.com/channels/799879767196958751/1000043206840426686
+This should have hopefully given you an overview of the layers submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `layers channel`_ or in the `layers forum`_!

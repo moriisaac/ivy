@@ -1,0 +1,32 @@
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Ivy
+
+   ivy/experimental.rst
+   ivy/activations.rst
+   ivy/constants.rst
+   ivy/control_flow_ops.rst
+   ivy/creation.rst
+   ivy/data_type.rst
+   ivy/device.rst
+   ivy/elementwise.rst
+   ivy/experimental.rst
+   ivy/general.rst
+   ivy/gradients.rst
+   ivy/layers.rst
+   ivy/linear_algebra.rst
+   ivy/losses.rst
+   ivy/manipulation.rst
+   ivy/meta.rst
+   ivy/nest.rst
+   ivy/norms.rst
+   ivy/random.rst
+   ivy/searching.rst
+   ivy/set.rst
+   ivy/sorting.rst
+   ivy/statistical.rst
+   ivy/utility.rst
+

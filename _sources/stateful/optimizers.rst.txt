@@ -1,0 +1,37 @@
+Optimizers
+==========
+
+.. automodule:: ivy.stateful.optimizers
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Optimizers
+
+   optimizers/Optimizer.rst
+   optimizers/SGD.rst
+   optimizers/LARS.rst
+   optimizers/Adam.rst
+   optimizers/LAMB.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`optimizers forum`: https://discord.com/channels/799879767196958751/1028300892434350090
+.. _`optimizers forum`: https://discord.com/channels/799879767196958751/1028300892434350090
+.. _`optimizers forum`: https://discord.com/channels/799879767196958751/1028300892434350090
+.. _`optimizers forum`: https://discord.com/channels/799879767196958751/1028300892434350090
+.. _`optimizers forum`: https://discord.com/channels/799879767196958751/1028300892434350090
+.. _`optimizers forum`: https://discord.com/channels/799879767196958751/1028300892434350090
+.. _`optimizers forum`: https://discord.com/channels/799879767196958751/1028300892434350090
+.. _`optimizers channel`: https://discord.com/channels/799879767196958751/1000043277870964747
+.. _`optimizers channel`: https://discord.com/channels/799879767196958751/1000043277870964747
+.. _`optimizers channel`: https://discord.com/channels/799879767196958751/1000043277870964747
+.. _`optimizers channel`: https://discord.com/channels/799879767196958751/1000043277870964747
+.. _`optimizers channel`: https://discord.com/channels/799879767196958751/1000043277870964747
+.. _`optimizers channel`: https://discord.com/channels/799879767196958751/1000043277870964747
+.. _`optimizers channel`: https://discord.com/channels/799879767196958751/1000043277870964747
+This should have hopefully given you an overview of the optimizers submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `optimizers channel`_ or in the `optimizers forum`_!

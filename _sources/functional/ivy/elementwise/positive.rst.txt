@@ -1,0 +1,38 @@
+positive
+========
+
+.. autofunction:: ivy.functional.ivy.elementwise.positive
+
+.. autofunction:: ivy.array.array_methods.positive
+
+.. autofunction:: ivy.container.container_methods.positive
+
+.. autofunction:: ivy.container.container_methods.static_positive
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: positive
+
+   positive/positive_functional.rst
+   positive/positive_array.rst
+   positive/positive_container.rst
+   positive/static_positive_container.rst
+

@@ -1,0 +1,38 @@
+has_nans
+========
+
+.. autofunction:: ivy.functional.ivy.general.has_nans
+
+.. autofunction:: ivy.array.array_methods.has_nans
+
+.. autofunction:: ivy.container.container_methods.static_has_nans
+
+.. autofunction:: ivy.container.container_methods.has_nans
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: has_nans
+
+   has_nans/has_nans_functional.rst
+   has_nans/has_nans_array.rst
+   has_nans/has_nans_container.rst
+   has_nans/static_has_nans_container.rst
+

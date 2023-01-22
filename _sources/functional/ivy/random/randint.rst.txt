@@ -1,0 +1,38 @@
+randint
+=======
+
+.. autofunction:: ivy.functional.ivy.random.randint
+
+.. autofunction:: ivy.array.array_methods.randint
+
+.. autofunction:: ivy.container.container_methods.static_randint
+
+.. autofunction:: ivy.container.container_methods.randint
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: randint
+
+   randint/randint_functional.rst
+   randint/randint_array.rst
+   randint/randint_container.rst
+   randint/static_randint_container.rst
+

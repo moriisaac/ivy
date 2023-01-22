@@ -1,0 +1,58 @@
+Device
+======
+
+.. automodule:: ivy.functional.ivy.device
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Device
+
+   device/get_all_ivy_arrays_on_dev.rst
+   device/num_ivy_arrays_on_dev.rst
+   device/print_all_ivy_arrays_on_dev.rst
+   device/dev.rst
+   device/as_ivy_dev.rst
+   device/as_native_dev.rst
+   device/clear_mem_on_dev.rst
+   device/total_mem_on_dev.rst
+   device/used_mem_on_dev.rst
+   device/percent_used_mem_on_dev.rst
+   device/dev_util.rst
+   device/gpu_is_available.rst
+   device/num_cpu_cores.rst
+   device/num_gpus.rst
+   device/tpu_is_available.rst
+   device/default_device.rst
+   device/set_default_device.rst
+   device/unset_default_device.rst
+   device/to_device.rst
+   device/split_factor.rst
+   device/set_split_factor.rst
+   device/split_func_call.rst
+   device/function_supported_devices.rst
+   device/function_unsupported_devices.rst
+   device/DefaultDevice.rst
+   device/Profiler.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`device forum`: https://discord.com/channels/799879767196958751/1028298877998211204
+.. _`device forum`: https://discord.com/channels/799879767196958751/1028298877998211204
+.. _`device forum`: https://discord.com/channels/799879767196958751/1028298877998211204
+.. _`device forum`: https://discord.com/channels/799879767196958751/1028298877998211204
+.. _`device forum`: https://discord.com/channels/799879767196958751/1028298877998211204
+.. _`device forum`: https://discord.com/channels/799879767196958751/1028298877998211204
+.. _`device forum`: https://discord.com/channels/799879767196958751/1028298877998211204
+.. _`device channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`device channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`device channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`device channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`device channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`device channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+.. _`device channel`: https://discord.com/channels/799879767196958751/1000043825085026394
+This should have hopefully given you an overview of the device submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `device channel`_ or in the `device forum`_!

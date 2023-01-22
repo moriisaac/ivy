@@ -1,0 +1,109 @@
+General
+=======
+
+.. automodule:: ivy.functional.ivy.general
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: General
+
+   general/get_referrers_recursive.rst
+   general/is_native_array.rst
+   general/is_ivy_array.rst
+   general/is_array.rst
+   general/is_ivy_container.rst
+   general/set_array_mode.rst
+   general/unset_array_mode.rst
+   general/get_array_mode.rst
+   general/set_nestable_mode.rst
+   general/unset_nestable_mode.rst
+   general/get_nestable_mode.rst
+   general/set_exception_trace_mode.rst
+   general/unset_exception_trace_mode.rst
+   general/get_exception_trace_mode.rst
+   general/set_show_func_wrapper_trace_mode.rst
+   general/unset_show_func_wrapper_trace_mode.rst
+   general/get_show_func_wrapper_trace_mode.rst
+   general/array_equal.rst
+   general/all_equal.rst
+   general/to_numpy.rst
+   general/isscalar.rst
+   general/to_scalar.rst
+   general/to_list.rst
+   general/clip_vector_norm.rst
+   general/clip_matrix_norm.rst
+   general/fourier_encode.rst
+   general/value_is_nan.rst
+   general/has_nans.rst
+   general/exists.rst
+   general/default.rst
+   general/to_ivy_shape.rst
+   general/to_native_shape.rst
+   general/try_else_none.rst
+   general/arg_names.rst
+   general/match_kwargs.rst
+   general/cache_fn.rst
+   general/current_backend_str.rst
+   general/einops_rearrange.rst
+   general/einops_reduce.rst
+   general/einops_repeat.rst
+   general/get_min_denominator.rst
+   general/set_min_denominator.rst
+   general/get_min_base.rst
+   general/set_min_base.rst
+   general/stable_divide.rst
+   general/stable_pow.rst
+   general/get_all_arrays_in_memory.rst
+   general/num_arrays_in_memory.rst
+   general/print_all_arrays_in_memory.rst
+   general/set_queue_timeout.rst
+   general/get_queue_timeout.rst
+   general/unset_queue_timeout.rst
+   general/get_tmp_dir.rst
+   general/set_tmp_dir.rst
+   general/container_types.rst
+   general/inplace_arrays_supported.rst
+   general/inplace_variables_supported.rst
+   general/supports_inplace_updates.rst
+   general/assert_supports_inplace.rst
+   general/get_item.rst
+   general/inplace_update.rst
+   general/inplace_decrement.rst
+   general/inplace_increment.rst
+   general/scatter_flat.rst
+   general/scatter_nd.rst
+   general/gather.rst
+   general/gather_nd.rst
+   general/multiprocessing.rst
+   general/shape.rst
+   general/set_shape_array_mode.rst
+   general/unset_shape_array_mode.rst
+   general/shape_array_mode.rst
+   general/get_num_dims.rst
+   general/arg_info.rst
+   general/function_supported_devices_and_dtypes.rst
+   general/function_unsupported_devices_and_dtypes.rst
+   general/vmap.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`general forum`: https://discord.com/channels/799879767196958751/1028298984806170634
+.. _`general forum`: https://discord.com/channels/799879767196958751/1028298984806170634
+.. _`general forum`: https://discord.com/channels/799879767196958751/1028298984806170634
+.. _`general forum`: https://discord.com/channels/799879767196958751/1028298984806170634
+.. _`general forum`: https://discord.com/channels/799879767196958751/1028298984806170634
+.. _`general forum`: https://discord.com/channels/799879767196958751/1028298984806170634
+.. _`general forum`: https://discord.com/channels/799879767196958751/1028298984806170634
+.. _`general channel`: https://discord.com/channels/799879767196958751/1000043859973247006
+.. _`general channel`: https://discord.com/channels/799879767196958751/1000043859973247006
+.. _`general channel`: https://discord.com/channels/799879767196958751/1000043859973247006
+.. _`general channel`: https://discord.com/channels/799879767196958751/1000043859973247006
+.. _`general channel`: https://discord.com/channels/799879767196958751/1000043859973247006
+.. _`general channel`: https://discord.com/channels/799879767196958751/1000043859973247006
+.. _`general channel`: https://discord.com/channels/799879767196958751/1000043859973247006
+This should have hopefully given you an overview of the general submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `general channel`_ or in the `general forum`_!

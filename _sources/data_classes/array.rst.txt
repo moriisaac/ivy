@@ -1,0 +1,64 @@
+Array
+=====
+
+.. automodule:: ivy.array.array
+    :members:
+    :special-members: __init__
+    :undoc-members:
+    :show-inheritance:
+
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :maxdepth: -1
+   :caption: Array
+
+   array/array/Array.rst
+
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: Array
+
+   array/activations.rst
+   array/conversions.rst
+   array/creation.rst
+   array/data_type.rst
+   array/device.rst
+   array/elementwise.rst
+   array/experimental.rst
+   array/general.rst
+   array/gradients.rst
+   array/image.rst
+   array/layers.rst
+   array/linear_algebra.rst
+   array/losses.rst
+   array/manipulation.rst
+   array/norms.rst
+   array/random.rst
+   array/searching.rst
+   array/set.rst
+   array/sorting.rst
+   array/statistical.rst
+   array/utility.rst
+   array/wrapping.rst
+
+.. _`discord`: https://discord.gg/ZVQdvbzNQJ 
+.. _`array forum`: https://discord.com/channels/799879767196958751/1028296936203235359
+.. _`array forum`: https://discord.com/channels/799879767196958751/1028296936203235359
+.. _`array forum`: https://discord.com/channels/799879767196958751/1028296936203235359
+.. _`array forum`: https://discord.com/channels/799879767196958751/1028296936203235359
+.. _`array forum`: https://discord.com/channels/799879767196958751/1028296936203235359
+.. _`array forum`: https://discord.com/channels/799879767196958751/1028296936203235359
+.. _`array forum`: https://discord.com/channels/799879767196958751/1028296936203235359
+.. _`array channel`: https://discord.com/channels/799879767196958751/1000042910831620176
+.. _`array channel`: https://discord.com/channels/799879767196958751/1000042910831620176
+.. _`array channel`: https://discord.com/channels/799879767196958751/1000042910831620176
+.. _`array channel`: https://discord.com/channels/799879767196958751/1000042910831620176
+.. _`array channel`: https://discord.com/channels/799879767196958751/1000042910831620176
+.. _`array channel`: https://discord.com/channels/799879767196958751/1000042910831620176
+.. _`array channel`: https://discord.com/channels/799879767196958751/1000042910831620176
+This should have hopefully given you an overview of the array submodule,If you have any questions, please feel free to reach out on our `discord`_ in the `array channel`_ or in the `array forum`_!

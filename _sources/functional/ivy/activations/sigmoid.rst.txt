@@ -1,0 +1,38 @@
+sigmoid
+=======
+
+.. autofunction:: ivy.functional.ivy.activations.sigmoid
+
+.. autofunction:: ivy.array.array_methods.sigmoid
+
+.. autofunction:: ivy.container.container_methods.sigmoid
+
+.. autofunction:: ivy.container.container_methods.static_sigmoid
+|
+| **Supported Frameworks:**
+
+|jax_logo| |tf_logo| |pytorch_logo| |numpy_logo|
+
+.. |jax_logo| image:: ../../../logos/supported/jax_logo.png
+   :target: https://jax.readthedocs.io
+
+.. |tf_logo| image:: ../../../logos/supported/tensorflow_logo.png
+   :target: https://www.tensorflow.org
+
+.. |pytorch_logo| image:: ../../../logos/supported/pytorch_logo.png
+   :target: https://pytorch.org
+
+.. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
+   :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: sigmoid
+
+   sigmoid/sigmoid_functional.rst
+   sigmoid/sigmoid_array.rst
+   sigmoid/sigmoid_container.rst
+   sigmoid/static_sigmoid_container.rst
+
