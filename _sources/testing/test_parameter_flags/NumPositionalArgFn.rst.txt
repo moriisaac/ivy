@@ -1,0 +1,8 @@
+NumPositionalArgFn
+==================
+
+.. autoclass:: ivy_tests.test_ivy.helpers.test_parameter_flags.NumPositionalArgFn
+	:members:
+	:special-members: __init__
+	:undoc-members:
+	:show-inheritance:

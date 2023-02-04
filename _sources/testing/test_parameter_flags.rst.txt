@@ -1,0 +1,25 @@
+Test parameter flags
+====================
+
+.. automodule:: ivy_tests.test_ivy.helpers.test_parameter_flags
+	:members:
+	:special-members: __init__
+	:undoc-members:
+	:show-inheritance:
+
+.. toctree::
+	:hidden:
+	:maxdepth: -1
+	:caption: test_parameter_flags
+
+	test_parameter_flags/build_flag.rst
+	test_parameter_flags/frontend_function_flags.rst
+	test_parameter_flags/function_flags.rst
+	test_parameter_flags/AsVariableFlags.rst
+	test_parameter_flags/ContainerFlags.rst
+	test_parameter_flags/FrontendFunctionTestFlags.rst
+	test_parameter_flags/FunctionTestFlags.rst
+	test_parameter_flags/NativeArrayFlags.rst
+	test_parameter_flags/NumPositionalArg.rst
+	test_parameter_flags/NumPositionalArgFn.rst
+	test_parameter_flags/NumPositionalArgMethod.rst
