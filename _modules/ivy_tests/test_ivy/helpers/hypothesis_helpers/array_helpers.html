@@ -926,31 +926,28 @@
                         <span class="n">exclude_min</span><span class="o">=</span><span class="n">exclude_min</span><span class="p">,</span>
                         <span class="n">exclude_max</span><span class="o">=</span><span class="n">exclude_max</span><span class="p">,</span>
                 <span class="p">),</span>
+                    
             <span class="p">)</span>  
             <span class="k">if</span> <span class="s2">&quot;float&quot;</span> <span class="ow">in</span> <span class="n">dtype</span> <span class="ow">or</span> <span class="s2">&quot;complex&quot;</span> <span class="ow">in</span> <span class="n">dtype</span><span class="p">:</span>
                 <span class="n">kind_dtype</span> <span class="o">=</span> <span class="s2">&quot;float&quot;</span>
                 <span class="n">dtype_info</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
             <span class="k">elif</span> <span class="s2">&quot;int&quot;</span> <span class="ow">in</span> <span class="n">dtype</span><span class="p">:</span>
-                <span class="n">kind_dtype</span> <span class="o">=</span> <span class="s2">&quot;int&quot;</span>
-                <span class="n">dtype_info</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+               <span class="n">kind_dtype</span> <span class="o">=</span> <span class="s2">&quot;int&quot;</span>
+               <span class="n">dtype_info</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;unsupported data type&quot;</span><span class="p">)</span>
+              <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;unsupported data type&quot;</span><span class="p">)</span>
 
-     <span class="c1"># new code to generate random float array or complex array with subnormal values</span>
-    
-    
-    
-    
+           <span class="c1"># new code to generate random float array or complex array with subnormal values</span>
+
             <span class="k">if</span> <span class="n">allow_subnormal</span><span class="p">:</span>
-                <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="o">*</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+              <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="o">*</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isneginf</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">isposinf</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-                <span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+             <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isneginf</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">isposinf</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+             <span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
             <span class="k">return</span> <span class="n">arr</span>
 
-                
-                
-                
+
+    
             <span class="k">if</span> <span class="s2">&quot;complex&quot;</span> <span class="ow">in</span> <span class="n">dtype</span><span class="p">:</span>
                <span class="n">float_strategy</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">tuples</span><span class="p">(</span><span class="n">float_strategy</span><span class="p">,</span> <span class="n">float_strategy</span><span class="p">)</span>
                <span class="n">values</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span>
